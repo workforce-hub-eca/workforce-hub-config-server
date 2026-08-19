@@ -1,8 +1,13 @@
+server:
+  port: 8080
+
 spring:
+  application:
+    name: api-gateway
   cloud:
     gateway:
       server:
-        webflux:
+        webmvc:
           routes:
             - id: department-service
               uri: lb://department-service
@@ -16,6 +21,7 @@ spring:
               uri: lb://document-service
               predicates:
                 - Path=/api/v1/documents/**
+
 eureka:
   client:
     service-url:
