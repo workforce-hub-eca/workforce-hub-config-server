@@ -2,6 +2,7 @@ spring:
   data:
     mongodb:
       uri: mongodb://localhost:27017/workforce_document_db
+      database: workforce_document_db
 
 eureka:
   client:
