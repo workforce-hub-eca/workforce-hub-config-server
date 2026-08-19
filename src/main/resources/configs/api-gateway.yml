@@ -1,0 +1,20 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: department-service
+          uri: lb://department-service
+          predicates:
+            - Path=/api/v1/departments/**
+        - id: employee-service
+          uri: lb://employee-service
+          predicates:
+            - Path=/api/v1/employees/**
+        - id: document-service
+          uri: lb://document-service
+          predicates:
+            - Path=/api/v1/documents/**
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
