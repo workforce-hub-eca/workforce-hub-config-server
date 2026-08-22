@@ -1,0 +1,4 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: ${API_GATEWAY_EUREKA_URL}

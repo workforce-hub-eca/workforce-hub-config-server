@@ -1,0 +1,9 @@
+spring:
+  data:
+    mongodb:
+      uri: ${DOCUMENT_MONGODB_URI}
+
+eureka:
+  client:
+    service-url:
+      defaultZone: ${DOCUMENT_EUREKA_URL}

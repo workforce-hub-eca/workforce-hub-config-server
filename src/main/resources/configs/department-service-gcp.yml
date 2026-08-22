@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    url: ${DEPARTMENT_DB_URL}
+    username: ${DEPARTMENT_DB_USERNAME}
+    password: ${DEPARTMENT_DB_PASSWORD}
+
+eureka:
+  client:
+    service-url:
+      defaultZone: ${DEPARTMENT_EUREKA_URL}
